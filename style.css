@@ -1,0 +1,132 @@
+:root {
+    --back: rgb(63, 63, 63);
+    --main: #0b0b0f;
+    --secTxt: #ff0000;
+    --triTxt:#ff7b7b;
+    --accent: #ff5252;
+}
+#naveBtnContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 80px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--main);
+    color: var(--secTxt);
+    transition: left 0.3s ease;
+    z-index: 100;
+    padding: 0;
+}
+
+nav.hidden{
+    left: -100%;
+}
+
+#icon{
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    z-index: 999;
+    color: var(--secTxt);  
+    font-size: 2rem;
+    margin-top: -2%;
+    left: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    font-size: 500%;
+    font-weight: 500;
+}
+
+#icon:hover{
+    transform: scale(1.1);
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--back);
+}
+
+header{
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+main{
+    margin-left: 80px;
+    margin-top: 20px;
+    transition: filter 0.3s ease;
+}
+
+main.blurred{
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+    hr{
+        width: 50%;
+        border: 1px solid var(--secTxt);
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: auto;
+        box-shadow: #ff0000 0px 0px 10px;
+    }
+
+a{
+    color: var(--secTxt);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10% 15%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+a.navBtn{
+    pointer-events: auto;
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+a:hover{
+    background-color: var(--accent);
+    color: white;
+}
+
+main.blurred{
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+#topContainer{
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   width: 100%;
+}
+#imageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* grid-column: span 1; */
+}
+#homeImg {
+    box-shadow: #ff0000 0px 0px 20px;
+    width:36%;
+}
